@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Upload Files</name>
+    <author>Toxa S</author>
+    <version>1.0.0</version>
+    <description>Модуль загрузки файлов.</description>
+    <files>
+        <filename>mod_uploadfiles.xml</filename>
+        <filename module="mod_uploadfiles">mod_uploadfiles.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+	 
+    <config>
+		<fields name="params">
+            
+        <fieldset name="basic">
+                
+            <field name="testbtn" type="radio" label="Просто ползунок" default="1" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+            </field>
+                
+        </fieldset>
+            
+        </fields>
+    </config>
+</extension>
