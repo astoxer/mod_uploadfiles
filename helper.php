@@ -17,7 +17,7 @@ class ModUploadFilesHelper
 		
 			if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
 				if ($_FILES['inputfile']['error'] == UPLOAD_ERR_OK && $_FILES['inputfile']['type'] == 'image/jpeg') { //Разрешенный тип файлов
-					$destiation_dir = dirname(__FILE__) . '/../../images/555/' . date('YmdHis') . '.jpg'; //Директория и имя файла
+					$destiation_dir = dirname(__FILE__) . $params->get('folder_default') . date('YmdHis') . '.jpg'; //Директория и имя файла
 					if (move_uploaded_file($_FILES['inputfile']['tmp_name'], $destiation_dir)) { //Move the file to desired directory.
 						
 						?>
